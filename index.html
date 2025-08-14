@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Item Management</h1>
+        
+        <!-- Add Item Form -->
+        <div class="form-container">
+            <h2>Add New Item</h2>
+            <form id="addForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" required></textarea>
+                </div>
+                <button type="submit" class="btn">Add Item</button>
+            </form>
+        </div>
+
+        <!-- Items List -->
+        <div class="list-container">
+            <h2>Items</h2>
+            <ul id="itemsList"></ul>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" id="closeBtn">&times;</span>
+            <h2>Edit Item</h2>
+            <form id="editForm">
+                <input type="hidden" id="editId" name="id">
+                <div class="form-group">
+                    <label for="editName">Name:</label>
+                    <input type="text" id="editName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="editDescription">Description:</label>
+                    <textarea id="editDescription" name="description" required></textarea>
+                </div>
+                <button type="submit" class="btn">Update Item</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
